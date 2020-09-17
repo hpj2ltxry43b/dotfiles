@@ -1,0 +1,29 @@
+#!/bin/bash
+
+batterylevel=$(cat /sys/class/power_supply/BAT0/capacity)
+batterycharging=$(cat /sys/class/power_supply/BAT0/status)
+
+if [ $batterycharging = "Charging" ]
+then
+	batterycharging=1
+else
+	batterycharging=0
+fi
+
+if [ $batterycharging -eq 1 ] && [ $batterylevel -ge 60 ]
+then
+	notify-send -u normal -t 5000 -a "Battery" "Battery sufficieintly charged" "Battery level is over 60% ($batterylevel%)"
+fi
+
+if [ $batterycharging -eq 0 ] && [ $batterylevel -lt 50 ]
+then
+	notify-send -u normal -t 5000 -a "Battery" "Battery should charge" "Battery level is under 50% ($batterylevel%)"
+fi
+
+
+# if [ $batterylevel -lt 50 ]
+# then
+# 	echo "Battery Should Charge"
+# elif [ $batterylevel -ge 60 ]
+# then
+# fi

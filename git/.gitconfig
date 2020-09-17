@@ -1,0 +1,15 @@
+[user]
+	name = Jason Nguyen
+	email = hpj2ltxry43b@gmail.com
+[core]
+	editor = vimx
+	excludesFile = ~/.gitignore
+[credential]
+	helper = cache --timeout=3600
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[alias]
+	tree = log --graph --decorate=full --oneline --all --abbrev-commit

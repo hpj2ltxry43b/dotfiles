@@ -1,0 +1,48 @@
+set nocompatible
+
+let $RC = "$HOME/.vim/vimrc"
+set nowrap
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+set foldmethod=marker
+
+set autowrite
+
+set autoindent
+set nosmartindent
+set nocindent
+
+set nohls
+set incsearch
+
+set nrformats=bin,hex,alpha
+
+filetype indent plugin on 
+
+inoremap {<CR> {<CR>}<Esc>O
+
+call plug#begin('~/.vim/plugged')
+Plug 'cormacrelf/vim-colors-github'               " github
+Plug 'bluz71/vim-nightfly-guicolors'              " nightfly
+Plug 'tikhomirov/vim-glsl'
+call plug#end()
+
+if has('termguicolors')
+    set termguicolors
+
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+    set background=dark
+    colo nightfly
+endif
+
+function! Terms()
+    tab term
+    term
+    vert term
+endfunction
