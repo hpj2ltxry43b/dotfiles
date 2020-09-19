@@ -15,18 +15,16 @@ export PATH
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-unset command_not_found_handle
-
 # User specific aliases and functions
 
 export TERMINAL="alacritty"
 
 eval $(dircolors -b ~/.dir_colors)
 
-alias vim='vimx'
-alias la='ls -a'
-alias lla='ls -la'
-
+alias ls='ls --color'
+alias ll='ls -l --color'
+alias la='ls -a --color'
+alias lla='ls -la --color'
 alias md='mkdir'
 alias rd='rmdir'
 
