@@ -24,7 +24,6 @@ exec firefox -p stuff
 exec firefox -p hpj2ltxry43b
 exec firefox -p school
 exec dunst
-exec ~/rmshit/bin/rmshit
 exec alacritty --class thingterminal
 # global keys (volume, brightness) {{{1
 set $refresh_i3status killall -SIGUSR1 i3status
