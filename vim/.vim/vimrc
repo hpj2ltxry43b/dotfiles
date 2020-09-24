@@ -21,6 +21,8 @@ set incsearch
 
 set nrformats=bin,hex,alpha
 
+set nu rnu
+
 filetype indent plugin on 
 
 inoremap {<CR> {<CR>}<Esc>O

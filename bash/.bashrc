@@ -18,6 +18,7 @@ export PATH
 # User specific aliases and functions
 
 export TERMINAL="alacritty"
+export EDITOR="vim"
 
 eval $(dircolors -b ~/.dir_colors)
 
@@ -27,6 +28,10 @@ alias la='ls -a --color'
 alias lla='ls -la --color'
 alias md='mkdir'
 alias rd='rmdir'
+
+alias rmrf='rm -rf'
+alias rmrfv='rm -rfv'
+alias rmrfiv='rm -rfiv'
 
 alias gsta='git status'
 alias gcom='git commit'
