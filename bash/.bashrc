@@ -20,12 +20,14 @@ export PATH
 export TERMINAL="alacritty"
 export EDITOR="vim"
 
+alias vim='vim -u ~/.vim/vimrc'
+
 eval $(dircolors -b ~/.dir_colors)
 
-alias ls='ls --color'
-alias ll='ls -l --color'
-alias la='ls -a --color'
-alias lla='ls -la --color'
+alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -a --color=auto'
+alias lla='ls -la --color=auto'
 alias md='mkdir'
 alias rd='rmdir'
 

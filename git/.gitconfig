@@ -2,7 +2,7 @@
 	name = Jason Nguyen
 	email = hpj2ltxry43b@gmail.com
 [core]
-	editor = vimx
+	editor = vim
 	excludesFile = ~/.gitignore
 [credential]
 	helper = cache --timeout=3600

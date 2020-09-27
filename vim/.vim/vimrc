@@ -19,9 +19,13 @@ set nocindent
 set nohls
 set incsearch
 
+set wildmenu
+
 set nrformats=bin,hex,alpha
 
 set nu rnu
+
+set showcmd
 
 filetype indent plugin on 
 
