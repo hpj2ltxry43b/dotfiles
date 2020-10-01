@@ -32,6 +32,7 @@ alias md='mkdir'
 alias rd='rmdir'
 
 alias rmrf='rm -rf'
+alias rmiv='rm -iv'
 alias rmrfv='rm -rfv'
 alias rmrfiv='rm -rfiv'
 
@@ -50,7 +51,6 @@ alias gf='git fetch'
 alias gfp='git fetch && git pull'
 alias gfpa='git fetch --all && git pull --all'
 
-alias clmake='clear && cmake --build .'
 alias tsmake='tsc' # much less awkward key combination
 alias mypys='mypy --disallow-any-expr --disallow-any-explicit --disallow-any-decorated --disallow-untyped-calls --strict-optional --warn-no-return --warn-return-any --disallow-redefinition --disallow-untyped-globals --show-error-context --show-column-numbers --show-error-codes --pretty --error-summary --strict --show-error-context'
 

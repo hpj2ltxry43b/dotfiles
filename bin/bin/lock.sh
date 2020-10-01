@@ -1,2 +1,2 @@
 #!/usr/bin/bash
-i3lock -ef -c "#7f7f7f" -p win
+i3lock -ef -c "#222f3e" -p win

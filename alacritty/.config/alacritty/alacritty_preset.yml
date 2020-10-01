@@ -166,28 +166,28 @@ font:
 # Colors (One Half Dark)
 colors:
   primary:
-    background: '#222f3e'
-    foreground: '#ecf0f1'
+    background: '@bg@'
+    foreground: '@fg@'
 
   normal:
-    black: '#222f3e'
-    red: '#e74c3c'
-    green: '#2ecc71'
-    yellow: '#f1c40f'
-    blue: '#3498db'
-    magenta: '#9b59b6'
-    cyan: '#0abde3'
-    white: '#ecf0f1'
+    black: '@black@'
+    red: '@red@'
+    green: '@green@'
+    yellow: '@yellow@'
+    blue: '@blue@'
+    magenta: '@magenta@'
+    cyan: '@cyan@'
+    white: '@white@'
 
   bright:
-    black: '#222f3e'
-    red: '#ff6b6b'
-    green: '#1dd1a1'
-    yellow: '#feca57'
-    blue: '#54a0ff'
-    magenta: '#f368e0'
-    cyan: '#48dbfb'
-    white: '#ecf0f1'
+    black: '@bblack@'
+    red: '@bred@'
+    green: '@bgreen@'
+    yellow: '@byellow@'
+    blue: '@bblue@'
+    magenta: '@bmagenta@'
+    cyan: '@bcyan@'
+    white: '@bwhite@'
 # Colors (Tomorrow Night)
 #colors:
   # Default colors

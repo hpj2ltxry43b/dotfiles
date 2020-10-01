@@ -3,12 +3,12 @@ set $mod Mod4
 # visual {{{1
 font pango: Source Code Pro 10
 # colors {{{2
-set $bg-color            #222f3e
-set $inactive-bg-color   #222f3e
-set $text-color          #ecf0f1
-set $inactive-text-color #bdc3c7
-set $urgent-bg-color     #c0392b
-set $moderate-text-color #ecf0f1
+set $bg-color            @bg@
+set $inactive-bg-color   @bg@
+set $text-color          @fg@
+set $inactive-text-color @fgless@
+set $urgent-bg-color     @bgmore@
+set $moderate-text-color @fg@
 # window colors
 #                       border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          #757575

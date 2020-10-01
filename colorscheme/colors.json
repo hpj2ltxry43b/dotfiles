@@ -1,0 +1,36 @@
+{
+    "bg": "@black",
+    "bgless": "@bg",
+    "bgmore": "@red",
+
+    "fg": "@white",
+    "fgless": "@dwhite",
+    "fgmore":"@white",
+
+    "dblack": "@black",
+    "dred": "@red",
+    "dgreen": "@green",
+    "dyellow": "@yellow",
+    "dblue": "@blue",
+    "dmagenta": "@magenta",
+    "dcyan": "@cyan",
+    "dwhite": "@white",
+
+    "black": "#282c34",
+    "red": "#e06c75",
+    "green": "#98c379",
+    "yellow": "#e5c07b",
+    "blue": "#61afef",
+    "magenta": "#c678dd",
+    "cyan": "#56b6c2",
+    "white": "#dcdfe4",
+
+    "bblack": "@black",
+    "bred": "@red",
+    "bgreen": "@green",
+    "byellow": "@yellow",
+    "bblue": "@blue",
+    "bmagenta": "@magenta",
+    "bcyan": "@cyan",
+    "bwhite": "@white"
+}

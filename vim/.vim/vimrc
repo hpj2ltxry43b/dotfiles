@@ -8,6 +8,8 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+set bs=indent,eol,start
+
 set foldmethod=marker
 
 set autowrite
@@ -26,6 +28,11 @@ set nrformats=bin,hex,alpha
 set nu rnu
 
 set showcmd
+
+set timeout
+set ttimeout
+set timeoutlen=1000
+set ttimeoutlen=100
 
 filetype indent plugin on 
 
