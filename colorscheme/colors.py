@@ -13,10 +13,10 @@ def rgbToHex(color):
     return '#' + ''.join(hex(c)[2:].zfill(2) for c in color)
 
 files = [
-    '../alacritty/.config/alacritty/alacritty_preset.yml',
-    '../i3/.config/i3/config_preset',
-    '../bin/bin/lock_preset.sh',
-    '../dunst/.config/dunst/dunstrc_preset',
+    ('../alacritty/.config/alacritty/alacritty_preset.yml', '../alacritty/.config/alacritty/alacritty.yml'),
+    ('../i3/.config/i3/config_preset', '../i3/.config/i3/config'),
+    ('../bin/bin/lock_preset.sh', '../bin/bin/lock.sh'),
+    ('../dunst/.config/dunst/dunstrc_preset', '../dunst/.config/dunst/dunstrc'),
 ]
 
 if len(sys.argv) == 1:
@@ -35,8 +35,8 @@ unused = set(colormod.colors.keys())
 colre = re.compile('@(\w+)@')
 
 if input('apply? ').startswith('y'):
-    for conffilefname in files:
-        with open(conffilefname, 'r') as f:
+    for conffilefnamein, confffilefnameout in files:
+        with open(conffilefnamein, 'r') as f:
             conffcon = f.read()
 
         conffsub = conffcon
@@ -54,7 +54,7 @@ if input('apply? ').startswith('y'):
         if len(missing):
             print(f'warning: missing colors in file {conffilefname}: ' + ', '.join(missing))
 
-        with open(conffilefname.replace('_preset', ''), 'w') as f:
+        with open(conffilefnameout, 'w') as f:
             f.write(conffsub)
 
     for unusedc in unused:

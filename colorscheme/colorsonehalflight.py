@@ -20,10 +20,10 @@ bwhite = (250, 250, 250)
 
 bg = (250, 250, 250)
 bgless = bg
-bgmore = utils.darken(*red, 50)
+bgmore = utils.lighten(*red, 50)
 
 fg = (56, 58, 66)
-fgless = utils.darken(*fg, 50)
+fgless = utils.lighten(*fg, 50)
 fgmore = fg
 
 colors = utils.integerizeColors({
