@@ -19,9 +19,9 @@ def error(msg):
     sys.exit(1)
 
 applyers = {}
-for applyer in os.listdir('./applies'):
+for applyer in os.listdir(f'{DOTDIR}/colors/applies'):
     if applyer.endswith('.py'):
-        spec = importlib.util.spec_from_file_location(applyer, './applies/' + applyer)
+        spec = importlib.util.spec_from_file_location(applyer, f'{DOTDIR}/colors/applies/' + applyer)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         applyers[applyer] = module
@@ -41,9 +41,9 @@ for applyern, applyer in applyers.items():
         error(f'Applyer \'{applyern}\' has attr \'verify\' but is not callable')
 
 schemes = {}
-for scheme in os.listdir('./schemes'):
+for scheme in os.listdir(f'{DOTDIR}/colors/schemes'):
     if scheme.endswith('.py'):
-        spec = importlib.util.spec_from_file_location(scheme, './schemes/' + scheme)
+        spec = importlib.util.spec_from_file_location(scheme, f'{DOTDIR}/colors/schemes/' + scheme)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         schemes[scheme] = module
