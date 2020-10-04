@@ -4,8 +4,11 @@ import os
 import sys
 
 DOTDIR = os.path.expanduser('~/dotfiles')
+VERBOSE = False
+
 def message(msg):
-    print(f'- {msg}')
+    if VERBOSE:
+        print(f'- {msg}')
 
 def warning(msg):
     print(f'! {msg}')
@@ -51,10 +54,10 @@ for schemen, scheme in schemes.items():
             error(f'Scheme \'{schemen}\' failed applyer check of \'{applyern}\'')
 
 if len(sys.argv) != 2:
-    message('Valid schemes are:')
+    warning('Valid schemes are:')
 
     for schemen in schemes.keys():
-        message(schemen)
+        warning(schemen)
 
     sys.exit(1)
 
@@ -64,10 +67,10 @@ if not chosen.endswith('.py'):
     chosen += '.py'
 
 if chosen not in schemes:
-    message('Valid schemes are:')
+    warning('Valid schemes are:')
 
     for schemen in schemes.keys():
-        message(schemen)
+        warning(schemen)
 
     sys.exit(1)
 
