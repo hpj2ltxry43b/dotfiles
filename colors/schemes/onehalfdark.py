@@ -54,3 +54,12 @@ colors:
 dunstLow = (background, darkenHex(foreground, 50))
 dunstNormal = (background, foreground)
 dunstCritical = (darkenHex(red, 50), foreground)
+
+i3Colors = f'''
+set $bg-color            {background}
+set $inactive-bg-color   {background}
+set $text-color          {foreground}
+set $inactive-text-color {darkenHex(foreground, 50)}
+set $urgent-bg-color     {darkenHex(red, 50)}
+set $moderate-text-color {darkenHex(foreground, 25)}
+'''
