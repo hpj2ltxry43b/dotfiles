@@ -3,11 +3,44 @@ import importlib.util
 import os
 import sys
 
-applyers = []
+print('- Importing applyers')
+applyers = {}
 for applyer in os.listdir('./applies'):
     if applyer.endswith('.py'):
         spec = importlib.util.spec_from_file_location(applyer, './applies/' + applyer)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
-        applyers.append(module)
+        applyers[applyer] = module
         print(f'- Imported applyer {applyer}')
+
+print('- Importing schemes')
+schemes = {}
+for scheme in os.listdir('./schemes'):
+    if scheme.endswith('.py'):
+        spec = importlib.util.spec_from_file_location(scheme, './schemes/' + scheme)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        schemes[scheme] = module
+        print(f'- Imported color scheme {scheme}')
+
+print('- Verifying applyers')
+for applyern, applyer in applyers.items():
+    if not hasattr(applyer, 'apply'):
+        print('! ERROR')
+        print(f'! Applyer \'{applyern}\' does not have attribute \'apply\'')
+        sys.exit(1)
+
+    if not callable(applyer.apply):
+        print('! ERROR')
+        print(f'! Applyer \'{applyern}\' has attr \'apply\' but is not callable')
+        sys.exit(1)
+
+    if not hasattr(applyer, 'verify'):
+        print('! ERROR')
+        print(f'! Applyer \'{applyern}\' does not have attribute \'verify\'')
+        sys.exit(1)
+
+    if not callable(applyer.verify):
+        print('! ERROR')
+        print(f'! Applyer \'{applyern}\' has attr \'verify\' but is not callable')
+        sys.exit(1)
