@@ -1,0 +1,1 @@
+vimColo = 'onehalflight'

@@ -3,7 +3,16 @@ import importlib.util
 import os
 import sys
 
-print('- Importing applyers')
+def message(msg):
+    print(f'- {msg}')
+
+def warning(msg):
+    print(f'! {msg}')
+
+def error(msg):
+    print(f'!! {msg}')
+    sys.exit(1)
+
 applyers = {}
 for applyer in os.listdir('./applies'):
     if applyer.endswith('.py'):
@@ -11,9 +20,21 @@ for applyer in os.listdir('./applies'):
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         applyers[applyer] = module
-        print(f'- Imported applyer {applyer}')
+        message(f'Imported applyer {applyer}')
 
-print('- Importing schemes')
+for applyern, applyer in applyers.items():
+    if not hasattr(applyer, 'apply'):
+        error(f'Applyer \'{applyern}\' does not have attribute \'apply\'')
+
+    if not callable(applyer.apply):
+        error(f'Applyer \'{applyern}\' has attr \'apply\' but is not callable')
+
+    if not hasattr(applyer, 'verify'):
+        error(f'Applyer \'{applyern}\' does not have attribute \'verify\'')
+
+    if not callable(applyer.verify):
+        error(f'Applyer \'{applyern}\' has attr \'verify\' but is not callable')
+
 schemes = {}
 for scheme in os.listdir('./schemes'):
     if scheme.endswith('.py'):
@@ -21,26 +42,9 @@ for scheme in os.listdir('./schemes'):
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         schemes[scheme] = module
-        print(f'- Imported color scheme {scheme}')
+        message(f'Imported color scheme {scheme}')
 
-print('- Verifying applyers')
-for applyern, applyer in applyers.items():
-    if not hasattr(applyer, 'apply'):
-        print('! ERROR')
-        print(f'! Applyer \'{applyern}\' does not have attribute \'apply\'')
-        sys.exit(1)
-
-    if not callable(applyer.apply):
-        print('! ERROR')
-        print(f'! Applyer \'{applyern}\' has attr \'apply\' but is not callable')
-        sys.exit(1)
-
-    if not hasattr(applyer, 'verify'):
-        print('! ERROR')
-        print(f'! Applyer \'{applyern}\' does not have attribute \'verify\'')
-        sys.exit(1)
-
-    if not callable(applyer.verify):
-        print('! ERROR')
-        print(f'! Applyer \'{applyern}\' has attr \'verify\' but is not callable')
-        sys.exit(1)
+for schemen, scheme in schemes.items():
+    for applyern, applyer in applyers.items():
+        if not applyer.verify(scheme):
+            warning(f'Scheme \'{schemen}\' not compatible with applyer \'{applyern}\'')
