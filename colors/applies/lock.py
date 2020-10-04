@@ -1,6 +1,7 @@
 
 def apply(scheme, dotdir):
-    pass
+    with open(f'{dotdir}/bin/bin/lock.sh', 'w') as f:
+        f.write(f'i3lock -ef -c "{scheme.lockColor}" -p win')
 
 def verify(scheme):
-    return True
+    return hasattr(scheme, 'lockColor')
