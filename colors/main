@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+import importlib.util
+import os
+import sys
+
+applyers = []
+for applyer in os.listdir('./applies'):
+    if applyer.endswith('.py'):
+        spec = importlib.util.spec_from_file_location(applyer, './applies/' + applyer)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        applyers.append(module)
+        print(f'- Imported applyer {applyer}')
