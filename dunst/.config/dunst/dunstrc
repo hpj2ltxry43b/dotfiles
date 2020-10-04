@@ -278,8 +278,8 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     # DUNST LOW URGENCY BEGIN
-    background = "#282c34"
-    foreground = "#aaadb1"
+    background = "#fafafa"
+    foreground = "#656978"
     # DUNST LOW URGENCY END
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
@@ -287,8 +287,8 @@
 
 [urgency_normal]
     # DUNST NORMAL URGENCY BEGIN
-    background = "#282c34"
-    foreground = "#dcdfe4"
+    background = "#fafafa"
+    foreground = "#383a42"
     # DUNST NORMAL URGENCY END
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
@@ -296,8 +296,8 @@
 
 [urgency_critical]
     # DUNST CRITICAL URGENCY BEGIN
-    background = "#9c4b51"
-    foreground = "#dcdfe4"
+    background = "#ff7261"
+    foreground = "#383a42"
     # DUNST CRITICAL URGENCY END
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable

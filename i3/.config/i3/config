@@ -5,12 +5,12 @@ font pango: Source Code Pro 10
 # colors {{{2
 # I3 COLORS BEGIN
 
-set $bg-color            #282c34
-set $inactive-bg-color   #282c34
-set $text-color          #dcdfe4
-set $inactive-text-color #aaadb1
-set $urgent-bg-color     #9c4b51
-set $moderate-text-color #c3c6ca
+set $bg-color            #fafafa
+set $inactive-bg-color   #fafafa
+set $text-color          #383a42
+set $inactive-text-color #656978
+set $urgent-bg-color     #ff7261
+set $moderate-text-color #4e515d
 # I3 COLORS END
 # window colors
 #                       border              background         text                 indicator

@@ -1,1 +1,1 @@
-i3lock -ef -c "#282c34" -p win
+i3lock -ef -c "#fafafa" -p win
