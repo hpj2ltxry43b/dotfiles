@@ -1,5 +1,5 @@
 
-def apply(scheme):
+def apply(scheme, dotdir):
     pass
 
 def verify(scheme):
