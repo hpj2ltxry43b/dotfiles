@@ -1,0 +1,30 @@
+#!/usr/bin/bash
+
+i3-msg layout splith
+
+( alacritty & )
+( alacritty & )
+( alacritty & )
+( alacritty & )
+
+sleep 1
+i3-msg layout tabbed
+i3-msg focus left
+i3-msg focus left
+i3-msg focus left
+i3-msg split v
+i3-msg focus right
+i3-msg move left
+i3-msg focus up
+i3-msg split h
+i3-msg focus right
+i3-msg move left
+i3-msg focus down
+i3-msg split h
+i3-msg layout tabbed
+i3-msg focus right
+i3-msg move left
+i3-msg focus left
+i3-msg focus up
+i3-msg focus left
+i3-msg focus left

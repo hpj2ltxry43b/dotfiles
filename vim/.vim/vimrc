@@ -52,12 +52,6 @@ if has('termguicolors')
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
-function! Terms()
-    tab term
-    term
-    vert term
-endfunction
-
 " stolen from https://shuheikagawa.com/blog/2020/02/14/switching-colorschemes-of-vim-and-alacritty/
 let colorpath = expand('~/.vim/curcolor.vim')
 if filereadable(colorpath)
