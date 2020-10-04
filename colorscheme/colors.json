@@ -7,14 +7,14 @@
     "fgless": "@dwhite",
     "fgmore":"@white",
 
-    "dblack": "@black",
-    "dred": "@red",
-    "dgreen": "@green",
-    "dyellow": "@yellow",
-    "dblue": "@blue",
-    "dmagenta": "@magenta",
-    "dcyan": "@cyan",
-    "dwhite": "@white",
+    "dblack": "$darken @black",
+    "dred": "$darken @red",
+    "dgreen": "$darken @green",
+    "dyellow": "$darken @yellow",
+    "dblue": "$darken @blue",
+    "dmagenta": "$darken @magenta",
+    "dcyan": "$darken @cyan",
+    "dwhite": "$darken @white",
 
     "black": "#282c34",
     "red": "#e06c75",
@@ -25,12 +25,12 @@
     "cyan": "#56b6c2",
     "white": "#dcdfe4",
 
-    "bblack": "@black",
-    "bred": "@red",
-    "bgreen": "@green",
-    "byellow": "@yellow",
-    "bblue": "@blue",
-    "bmagenta": "@magenta",
-    "bcyan": "@cyan",
-    "bwhite": "@white"
+    "bblack": "$lighten @black",
+    "bred": "$lighten @red",
+    "bgreen": "$lighten @green",
+    "byellow": "$lighten @yellow",
+    "bblue": "$lighten @blue",
+    "bmagenta": "$lighten @magenta",
+    "bcyan": "$lighten @cyan",
+    "bwhite": "$lighten @white"
 }

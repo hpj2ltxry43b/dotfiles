@@ -19,7 +19,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # startup {{{1
 exec --no-startup-id xss-lock --transfer-sleep-lock ~/bin/lock.sh # make i3lock lock
 exec --no-startup-id nm-applet # networkmanager applet tray applet thing
-exec --no-startup-id xsetroot -solid "$bg-color"
+exec_always --no-startup-id xsetroot -solid "$bg-color"
 exec firefox -p stuff
 exec firefox -p hpj2ltxry43b
 exec firefox -p school
