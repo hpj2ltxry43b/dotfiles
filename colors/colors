@@ -2,6 +2,7 @@
 import importlib.util
 import os
 import sys
+import subprocess
 
 DOTDIR = os.path.expanduser('~/dotfiles')
 VERBOSE = False
@@ -77,3 +78,5 @@ if chosen not in schemes:
 for applyern, applyer in applyers.items():
     applyer.apply(schemes[chosen], DOTDIR)
     message(f'Applyer {applyern} applied scheme {chosen}')
+
+subprocess.run([f'{DOTDIR}/colors/reload.sh'])
