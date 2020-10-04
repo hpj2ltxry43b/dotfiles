@@ -65,3 +65,5 @@ if filereadable(colorpath)
 else
     colo onehalfdark
 endif
+
+cnoreabbrev sorc so $RC
