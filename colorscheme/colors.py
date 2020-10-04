@@ -17,6 +17,7 @@ files = [
     ('../i3/.config/i3/config_preset', '../i3/.config/i3/config'),
     ('../bin/bin/lock_preset.sh', '../bin/bin/lock.sh'),
     ('../dunst/.config/dunst/dunstrc_preset', '../dunst/.config/dunst/dunstrc'),
+    ('../vim/.vim/curcolor.preset.vim', '../vim/.vim/curcolor.vim'),
 ]
 
 if len(sys.argv) == 1:
@@ -35,7 +36,7 @@ unused = set(colormod.colors.keys())
 colre = re.compile('@(\w+)@')
 
 if input('apply? ').startswith('y'):
-    for conffilefnamein, confffilefnameout in files:
+    for conffilefnamein, conffilefnameout in files:
         with open(conffilefnamein, 'r') as f:
             conffcon = f.read()
 
@@ -52,7 +53,7 @@ if input('apply? ').startswith('y'):
 
         missing = set(colre.findall(conffsub))
         if len(missing):
-            print(f'warning: missing colors in file {conffilefname}: ' + ', '.join(missing))
+            print(f'warning: missing colors in file {conffilefnamein}: ' + ', '.join(missing))
 
         with open(conffilefnameout, 'w') as f:
             f.write(conffsub)

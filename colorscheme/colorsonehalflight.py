@@ -52,4 +52,6 @@ colors = utils.integerizeColors({
     'fg': fg,
     'fgless': fgless,
     'fgmore': fgmore,
+
+    'vimcolor': 'onehalflight',
 })
