@@ -1,29 +1,56 @@
-vimColo = 'onehalflight'
-lockColor = '#fafafa'
+from utils import *
 
-alacrittyColors = '''# Colors (One Half Light)
+background = '#fafafa'
+foreground = '#383a42'
+
+black = '#383a42'
+red = '#e45649'
+green = '#50a14f'
+yellow = '#c18401'
+blue = '#0184bc'
+magenta = '#a626a4'
+cyan = '#0997b3'
+white = '#fafafa'
+
+bblack = '#383a42'
+bred = '#e45649'
+bgreen = '#50a14f'
+byellow = '#c18401'
+bblue = '#0184bc'
+bmagenta = '#a626a4'
+bcyan = '#0997b3'
+bwhite = '#fafafa'
+
+vimColo = 'onehalflight'
+lockColor = background
+
+alacrittyColors = f'''# Colors (One Half Light)
 colors:
   primary:
-    background: '0xfafafa'
-    foreground: '0x383a42'
+    background: '{background}'
+    foreground: '{foreground}'
 
   normal:
-    black: '0x383a42'
-    red: '0xe45649'
-    green: '0x50a14f'
-    yellow: '0xc18401'
-    blue: '0x0184bc'
-    magenta: '0xa626a4'
-    cyan: '0x0997b3'
-    white: '0xfafafa'
+    black: '{black}'
+    red: '{red}'
+    green: '{green}'
+    yellow: '{yellow}'
+    blue: '{blue}'
+    magenta: '{magenta}'
+    cyan: '{cyan}'
+    white: '{white}'
 
   bright:
-    black: '0x383a42'
-    red: '0xe45649'
-    green: '0x50a14f'
-    yellow: '0xc18401'
-    blue: '0x0184bc'
-    magenta: '0xa626a4'
-    cyan: '0x0997b3'
-    white: '0xfafafa'
+    black: '{bblack}'
+    red: '{bred}'
+    green: '{bgreen}'
+    yellow: '{byellow}'
+    blue: '{bblue}'
+    magenta: '{bmagenta}'
+    cyan: '{bcyan}'
+    white: '{bwhite}'
 '''
+
+dunstLow = (background, lightenHex(foreground, 50))
+dunstNormal = (background, foreground)
+dunstCritical = (lightenHex(red, 50), foreground)

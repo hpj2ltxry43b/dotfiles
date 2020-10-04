@@ -59,6 +59,10 @@ if len(sys.argv) != 2:
     sys.exit(1)
 
 chosen = sys.argv[1]
+
+if not chosen.endswith('.py'):
+    chosen += '.py'
+
 if chosen not in schemes:
     message('Valid schemes are:')
 
