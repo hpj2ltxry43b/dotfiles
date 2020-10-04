@@ -87,5 +87,5 @@ if input('apply? ').startswith('y'):
             f.write(conffsub)
 
 
-for unusedc in unused:
-    print(f'warning: unused color \'{unusedc}\'')
+    for unusedc in unused:
+        print(f'warning: unused color \'{unusedc}\'')

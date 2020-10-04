@@ -39,8 +39,8 @@ filetype indent plugin on
 inoremap {<CR> {<CR>}<Esc>O
 
 call plug#begin('~/.vim/plugged')
-Plug 'cormacrelf/vim-colors-github'               " github
-Plug 'bluz71/vim-nightfly-guicolors'              " nightfly
+Plug 'cormacrelf/vim-colors-github'               " github colors
+Plug 'sonph/onehalf', {'rtp': 'vim/'}             " one half colors
 Plug 'tikhomirov/vim-glsl'
 call plug#end()
 
@@ -50,8 +50,7 @@ if has('termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-    set background=dark
-    colo nightfly
+    colo onehalfdark
 endif
 
 function! Terms()
