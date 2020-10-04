@@ -21,6 +21,13 @@ export TERMINAL="alacritty"
 export EDITOR="vim"
 
 alias vim='vim -u ~/.vim/vimrc'
+alias vims='vim --servername VIM'
+alias v='vim --remote'
+alias vk='vim --remote-send'
+alias vt='vim --remote-tab'
+alias vsl='vim --serverlist'
+
+alias colors='~/dotfiles/colors/colors'
 
 eval $(dircolors -b ~/.dir_colors)
 

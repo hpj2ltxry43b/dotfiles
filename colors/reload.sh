@@ -7,3 +7,8 @@ killall dunst
 
 sleep 0.1
 ( dunst & )
+
+for vs in $(vim --serverlist)
+do
+    vim --remote-send ':so $RC<CR>' --servername "$vs"
+done
