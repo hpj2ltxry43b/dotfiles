@@ -1,7 +1,7 @@
 set $mod Mod4
 
 # visual {{{1
-font pango: Source Code Pro 10
+font pango: DejaVu Sans 11
 # colors {{{2
 # I3 COLORS
 # window colors
