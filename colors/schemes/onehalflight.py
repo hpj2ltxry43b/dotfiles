@@ -63,3 +63,9 @@ set $inactive-text-color {lightenHex(foreground, 50)}
 set $urgent-bg-color     {lightenHex(red, 50)}
 set $moderate-text-color {lightenHex(foreground, 25)}
 '''
+
+gtk2Theme = 'Adwaita'
+gtk3Theme = 'Adwaita'
+
+gtk2IconTheme = 'Adwaita'
+gtk3IconTheme = 'Adwaita'
