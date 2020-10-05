@@ -1,7 +1,7 @@
 import utils
 
 def apply(scheme, dotdir):
-    with open(f'{dotdir}/dunst/.config/dunst/dunstrc', 'r') as f:
+    with open(f'{dotdir}/dunst/.config/dunst/dunstrc.preset', 'r') as f:
         contents = f.read()
 
     colors = '''    background = "{}"
@@ -12,9 +12,9 @@ def apply(scheme, dotdir):
     normalurgencycolors = colors.format(*scheme.dunstNormal)
     criticalurgencycolors = colors.format(*scheme.dunstCritical)
 
-    contents = utils.chunkOut(contents, '# DUNST LOW URGENCY BEGIN\n'     , '    # DUNST LOW URGENCY END'     , lowurgencycolors     )
-    contents = utils.chunkOut(contents, '# DUNST NORMAL URGENCY BEGIN\n'  , '    # DUNST NORMAL URGENCY END'  , normalurgencycolors  )
-    contents = utils.chunkOut(contents, '# DUNST CRITICAL URGENCY BEGIN\n', '    # DUNST CRITICAL URGENCY END', criticalurgencycolors)
+    contents = utils.findAdd(contents, '# DUNST LOW URGENCY\n'     , lowurgencycolors     )
+    contents = utils.findAdd(contents, '# DUNST NORMAL URGENCY\n'  , normalurgencycolors  )
+    contents = utils.findAdd(contents, '# DUNST CRITICAL URGENCY\n', criticalurgencycolors)
 
     with open(f'{dotdir}/dunst/.config/dunst/dunstrc', 'w') as f:
         f.write(contents)

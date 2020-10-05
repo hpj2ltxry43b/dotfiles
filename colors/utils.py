@@ -15,6 +15,17 @@ def chunkOut(contents, startmarker, endmarker, replacement):
 
     return contents
 
+def findAdd(contents, marker, addition):
+    contents = str(contents)
+    addin = contents.find(marker)
+
+    if addin == -1:
+        raise Exception(f'Marker {marker} not found in contents')
+
+    contents = contents[:addin + len(marker)] + addition + contents[addin + len(marker):]
+
+    return contents
+
 def lighten(r, g, b, amt):
     colhls = list(colorsys.rgb_to_hls(r, g, b))
     colhls[1] += amt
