@@ -22,6 +22,7 @@ export EDITOR="vim"
 
 alias vim='vim -u ~/.vim/vimrc'
 alias vims='vim --servername VIM'
+alias vimss='vims -S'
 alias v='vim --remote'
 alias vk='vim --remote-send'
 alias vt='vim --remote-tab'
