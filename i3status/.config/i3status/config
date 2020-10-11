@@ -87,6 +87,8 @@ memory {
 
 order += "time"
 time {
-        format = "%Y-%m-%d %H:%M:%S"
+        # format = "%a, %d-%m-%Y %H:%M:%S"
+        # format = "%U %W %z %Z"
+        format = "%a %d/%m/%Y %H:%M:%S %j %W"
 }
 
