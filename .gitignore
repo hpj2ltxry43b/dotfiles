@@ -1,6 +1,5 @@
 __pycache__
 alacritty/.config/alacritty/alacritty.yml
-bin/bin/lock.sh
 dunst/.config/dunst/dunstrc
 gtkrc/
 i3/.config/i3/config
