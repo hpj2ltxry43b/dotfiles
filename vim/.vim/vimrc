@@ -63,3 +63,6 @@ else
 endif
 
 cnoreabbrev sorc so $RC
+cnoreabbrev W w
+
+hi Normal guibg=NONE ctermbg=NONE
