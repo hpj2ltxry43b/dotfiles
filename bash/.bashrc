@@ -36,6 +36,7 @@ alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias la='ls -a --color=auto'
 alias lla='ls -la --color=auto'
+alias l1='ls -1'
 alias md='mkdir'
 alias rd='rmdir'
 
