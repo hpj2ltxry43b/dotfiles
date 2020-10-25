@@ -27,6 +27,8 @@ alias v='vim --remote'
 alias vk='vim --remote-send'
 alias vt='vim --remote-tab'
 alias vsl='vim --serverlist'
+alias tv='terms && vims'
+alias tvs='tv -S'
 
 alias colors='~/dotfiles/colors/colors'
 
