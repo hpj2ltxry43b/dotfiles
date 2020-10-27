@@ -11,3 +11,7 @@ Sessionx.vim
 tags
 [._]*.un~
 
+bd/
+br/
+buildd/
+build/
