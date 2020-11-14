@@ -68,4 +68,3 @@ cnoreabbrev www w!!sudo tee % > /dev/null
 cnoreabbrev qqq qa!
 cnoreabbrev mkss mks!
 
-hi Normal guibg=NONE ctermbg=NONE
