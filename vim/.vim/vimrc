@@ -43,8 +43,8 @@ inoremap {<CR> {<CR>}<Esc>O
 call plug#begin('~/.vim/plugged')
 Plug 'cormacrelf/vim-colors-github'               " github colors
 Plug 'sonph/onehalf', {'rtp': 'vim/'}             " one half colors
-
 Plug 'tikhomirov/vim-glsl'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 if has('termguicolors')
