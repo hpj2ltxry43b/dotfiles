@@ -7,7 +7,7 @@ syn keyword oxianStatements return break breakall breakto continue assert
 syn keyword oxianModifiers inline volatile
 syn keyword oxianStrctures class enum namespace
 syn keyword oxianLabels case default
-syn keyword oxianVarDecls var const
+syn keyword oxianVarDecls var const fun
 syn keyword oxianConditionals if else switch
 syn keyword oxianLoops while for
 syn keyword oxianTypes char uint8 uint16 uint32 uint64 sint8 sint16 sint32 sint64 float bool double void
