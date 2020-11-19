@@ -61,3 +61,6 @@ alias gfpa='git fetch --all && git pull --all'
 alias tsmake='tsc' # much less awkward key combination
 alias mypys='mypy --disallow-any-expr --disallow-any-explicit --disallow-any-decorated --disallow-untyped-calls --strict-optional --warn-no-return --warn-return-any --disallow-redefinition --disallow-untyped-globals --show-error-context --show-column-numbers --show-error-codes --pretty --error-summary --strict --show-error-context'
 alias clm='clear && cmake --build .'
+
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
