@@ -58,8 +58,6 @@ endif
 let colorpath = expand('~/.vim/curcolor.vim')
 if filereadable(colorpath)
     exec 'source' colorpath
-else
-    colo onehalfdark
 endif
 
 cnoreabbrev sorc so $RC
