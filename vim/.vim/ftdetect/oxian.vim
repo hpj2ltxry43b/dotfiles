@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.oxian		set filetype=oxian
+au BufRead,BufNewFile *.ksl		set filetype=katsel

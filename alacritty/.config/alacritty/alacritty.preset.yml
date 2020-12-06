@@ -4,7 +4,7 @@ font:
   normal:
     family: DejaVu Sans Mono
 
-  size: 6
+  size: 10
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

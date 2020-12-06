@@ -45,6 +45,7 @@ Plug 'cormacrelf/vim-colors-github'               " github colors
 Plug 'sonph/onehalf', {'rtp': 'vim/'}             " one half colors
 Plug 'tikhomirov/vim-glsl'
 Plug 'chriskempson/base16-vim'
+Plug 'crusoexia/vim-monokai'
 call plug#end()
 
 if has('termguicolors')
