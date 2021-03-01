@@ -4,8 +4,6 @@
 [core]
 	editor = vim
 	excludesFile = ~/.gitignore
-[credential]
-	helper = /usr/lib/git-core/git-credential-libsecret
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
@@ -15,3 +13,5 @@
 	tree = log --graph --decorate=full --oneline --all --abbrev-commit
 [pull]
 	rebase = true
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
