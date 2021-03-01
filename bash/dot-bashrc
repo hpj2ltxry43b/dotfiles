@@ -3,7 +3,8 @@
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+    export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+    PATH="$GEM_HOME/bin:$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
 
@@ -66,3 +67,4 @@ alias clmh='clear && cabal build :all'
 
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
+source "$HOME/.cargo/env"
