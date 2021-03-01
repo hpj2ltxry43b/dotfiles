@@ -1,7 +1,9 @@
 set nocompatible
 
 let $RC = "$HOME/.vim/vimrc"
+
 set nowrap
+set scrolloff=3
 
 set tabstop=4
 set softtabstop=4
@@ -44,8 +46,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'cormacrelf/vim-colors-github'               " github colors
 Plug 'sonph/onehalf', {'rtp': 'vim/'}             " one half colors
 Plug 'tikhomirov/vim-glsl'
-Plug 'chriskempson/base16-vim'
 Plug 'crusoexia/vim-monokai'
+Plug 'itchyny/landscape.vim'
 call plug#end()
 
 if has('termguicolors')
@@ -54,6 +56,10 @@ if has('termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
+
+augroup filetype
+    au! BufRead,BufNewFile *.ll     set filetype=llvm
+augroup END
 
 " stolen from https://shuheikagawa.com/blog/2020/02/14/switching-colorschemes-of-vim-and-alacritty/
 let colorpath = expand('~/.vim/curcolor.vim')
