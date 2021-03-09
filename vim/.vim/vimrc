@@ -16,6 +16,9 @@ set foldmethod=marker
 
 set autowrite
 
+set undofile
+set undodir="$HOME/.vim/undo"
+
 set autoindent
 set nosmartindent
 set nocindent
@@ -41,6 +44,7 @@ set ruler
 filetype indent plugin on
 
 inoremap {<CR> {<CR>}<Esc>O
+nnoremap UT :MundoShow<CR>
 
 call plug#begin('~/.vim/plugged')
 Plug 'cormacrelf/vim-colors-github'               " github colors
@@ -48,6 +52,7 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}             " one half colors
 Plug 'tikhomirov/vim-glsl'
 Plug 'crusoexia/vim-monokai'
 Plug 'itchyny/landscape.vim'
+Plug 'simnalamburt/vim-mundo'
 call plug#end()
 
 if has('termguicolors')
