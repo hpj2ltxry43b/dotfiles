@@ -4,8 +4,8 @@
 background = #222
 background-sel = #444
 
-foreground = #bbb
-foreground-sel = #ddd
+foreground = #aaa
+foreground-sel = #eee
 
 important = #e74c3c
 
