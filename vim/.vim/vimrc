@@ -74,7 +74,6 @@ endif
 
 cnoreabbrev sorc so $RC
 cnoreabbrev W w
-cnoreabbrev www w!!sudo tee % > /dev/null
-cnoreabbrev qqq qa!
+cnoreabbrev www w!!sudo tee <C-R><C-R>% > /dev/null
 cnoreabbrev mkss mks!
 
