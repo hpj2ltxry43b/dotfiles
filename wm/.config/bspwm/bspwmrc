@@ -28,6 +28,9 @@ bspc config left_padding 5
 # bspwm rules {{{1
 bspc rule -a Firefox desktop='^1'
 # startup essentials {{{1
+# use left pointer cursor instead of 'X' cursor
+xsetroot -cursor_name left_ptr
+
 feh --bg-scale --no-fehbg ~/Firefox_wallpaper.png
 polybar main &
 dunst &
