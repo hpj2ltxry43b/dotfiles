@@ -32,7 +32,7 @@ bspc rule -a Firefox desktop='^1'
 xsetroot -cursor_name left_ptr
 
 feh --bg-scale --no-fehbg ~/Firefox_wallpaper.png
-polybar main &
+polybar main -r &
 dunst &
 picom \
     --shadow-radius=10 \
