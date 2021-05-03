@@ -6,7 +6,7 @@ super + Return
 
 # program launcher
 super + @space
-    dmenu_run
+    dmenu_run -nb "#222" -nf "#aaa" -sb "#444" -sf "#eee" -l 10 -fn "Cantarell:11"
 
 # make sxhkd reload its configuration files
 super + Escape
