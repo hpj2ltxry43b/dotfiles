@@ -7,14 +7,14 @@ background-sel = #444
 foreground = #aaa
 foreground-sel = #eee
 
-important = #e74c3c
+accent = #e74c3c
 
 [bar/main]
-width = 100%
-height = 30
-; offset-x = 0.5%
-; offset-y = 0.3%
-radius = 0
+width = 99.5%
+height = 40
+offset-x = 0.25%
+offset-y = 1%
+radius = 10
 fixed-center = true
 
 background = ${colors.background}
@@ -29,7 +29,7 @@ padding-right = 3
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = Cantarell:pixelsize=13;2
+font-0 = Biryani:12;3
 
 modules-left = windowname
 modules-center = bspwm
@@ -41,7 +41,7 @@ cursor-scroll = ns-resize
 [module/windowname]
 type = internal/xwindow
 label = %title%
-label-maxlen = 100
+label-maxlen = 80
 
 [module/bspwm]
 type = internal/bspwm
@@ -59,7 +59,7 @@ label-occupied-foreground = ${colors.foreground-sel}
 label-occupied-padding = 2
 
 label-urgent = !%index%!
-label-urgent-background = ${colors.important}
+label-urgent-background = ${colors.accent}
 label-urgent-foreground = ${colors.foreground-sel}
 label-urgent-padding = 2
 
