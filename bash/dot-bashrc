@@ -64,7 +64,7 @@ alias mypys='mypy --disallow-any-expr --disallow-any-explicit --disallow-any-dec
 
 alias clmc='clear && cmake --build .'
 alias clmh='clear && stack build'
-alias clrh='clear && stack exec'
+alias clrh='clear && stack run'
 alias clth='clear && stack test'
 alias clrr='clear && cargo run'
 alias clmr='clear && cargo build'
