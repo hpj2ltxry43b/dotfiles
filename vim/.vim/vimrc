@@ -72,8 +72,7 @@ if filereadable(colorpath)
     exec 'source' colorpath
 endif
 
-cnoreabbrev sorc so $RC
-cnoreabbrev W w
-cnoreabbrev www w!!sudo tee <C-R><C-R>% > /dev/null
+command SoRC so $RC
+command W w
+command WWW w!!sudo tee <C-R><C-R>% > /dev/null
 cnoreabbrev mkss mks!
-
