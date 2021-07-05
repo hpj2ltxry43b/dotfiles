@@ -25,7 +25,7 @@ my_config = def
 
             , borderWidth        = 10
             , normalBorderColor  = "#222222"
-            , focusedBorderColor = "#444444"
+            , focusedBorderColor = "#666666"
 
             , workspaces = map show [1..9]
 
