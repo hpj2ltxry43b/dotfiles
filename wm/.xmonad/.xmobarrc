@@ -1,0 +1,44 @@
+Config { overrideRedirect = False
+       , font     = "xft:Biryani-12"
+
+       , bgColor  = "#222222"
+       , fgColor  = "#aaaaaa"
+
+       , position = TopW C 100
+
+                    
+       , commands = [ Run Date "DATE %a %d %b %Y %H:%M:%S" "date" 10
+                    , Run Battery
+                        [ "--template", "BATTERY <acstatus> <left>%"
+
+                        , "--"
+                        , "-O", ">>"
+                        , "-i", ">|"
+                        , "-o", "<<"
+                        ] 10
+                    , Run Wireless ""
+                        [ "--template", "WIRELESS <quality> (<ssid>)"
+                        ] 10
+                    , Run Alsa "default" "Master"
+                        [ "--template", "VOLUME <volume>%<status>"
+                        , "--"
+                        , "--on", ""
+                        , "--off", "M"
+                        ]
+                    , Run StdinReader
+                    , Run MultiCoreTemp
+                        [ "--template", "CORETEMP <avg>C <max>C"
+                        ]
+                        10
+                    , Run Brightness
+                        [ "--template", "BRIGHT <percent>%"
+                        , "--"
+                        , "-D", "intel_backlight"
+                        ]
+                        10
+                    ]
+
+       , sepChar  = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader%}{%wi%     %bright%     %alsa:default:Master%     %battery%     %multicoretemp%     %date%"
+       }
