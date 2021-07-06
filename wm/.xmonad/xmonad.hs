@@ -36,7 +36,7 @@ my_config = def
                 spawn "xsetroot -cursor_name left_ptr" >>
                 spawn "feh --bg-scale --no-fehbg ~/Firefox_wallpaper.png" >>
                 spawn "dunst" >>
-                spawn "picom --shadow-radius=10 --fade-in-step=0.1 --fade-out-step=0.08 --fade-delta=10 --shadow --fading" >>
+                -- spawn "picom --shadow-radius=10 --fade-in-step=0.1 --fade-out-step=0.08 --fade-delta=10 --shadow --fading" >>
                 spawn "firefox -p stuff" >>
                 spawn "firefox -p lsotnnirhcdfkb"
 

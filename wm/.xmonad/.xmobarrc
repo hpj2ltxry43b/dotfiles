@@ -10,7 +10,7 @@ Config { overrideRedirect = False
        , position = TopW C 100
 
                     
-       , commands = [ Run Date "<box> <fn=1></fn> %a %d %b %Y </box> <box><fn=1></fn> %H:%M:%S</box>" "date" 10
+       , commands = [ Run Date "<box> <fn=1></fn> %a %d %b %Y </box> <box> <fn=1></fn> %H:%M:%S </box>" "date" 10
                     , Run MultiCoreTemp
                         [ "--template", "<box> <fn=1></fn> <avg>°C <max>°C </box>"
                         ]
