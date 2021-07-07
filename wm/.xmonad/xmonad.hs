@@ -31,7 +31,6 @@ my_config = def
 
             , startupHook =
                 startupHook def >>
-                sendMessage (ModifySmartBorder $ const False) >>
                 spawn "killall -q dunst picom" >>
                 spawn "xsetroot -cursor_name left_ptr" >>
                 spawn "feh --bg-scale --no-fehbg ~/Firefox_wallpaper.png" >>
@@ -41,7 +40,7 @@ my_config = def
                 spawn "firefox -p lsotnnirhcdfkb"
 
             , layoutHook =
-                spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10) True $ layoutHook def
+                spacingRaw False (Border 10 10 10 10) True (Border 10 10 10 10) True $ layoutHook def
 
             }
             `removeKeys`
